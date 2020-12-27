@@ -3,7 +3,7 @@ import telebot
 import time 
 from pi_camera import pi_camera
 
-token = '1421991111:AAG9EQEAWC5-t70oGSi85PC0xgHLRzltuq4'
+token = '*****'
 bot = telebot.TeleBot(token = token)
 # recent_chat_id =  638652175 
 recent_chat_id = -408117940
