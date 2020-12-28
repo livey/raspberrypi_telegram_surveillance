@@ -8,7 +8,7 @@ The image resolution is maximized. When the video resolution is 1920*792, it man
 pi camera
 
 ## limitations & improvements
-* The framerate is so low. Do not know how to improve it. It is weird video resolutions 640*480 and 1920*792 result in the same maximal framerate 8. 
+* The framerate is so low. Do not know how to improve it. It is weird video resolutions 640x480 and 1920x792 result in the same maximal framerate 8. 
 * The pi camera only output motion vector when you choose h264 format while the telegram bot support mp4 video. So, we need MP4Box to do format converting.
 * Some in memory operations can reduce the disc reading, for example, capture a image and send it to telegram and capture video, convert to mp4 and send it to telegram.
 * Periodic operations such as taking a photo can be scheduled with more sophisticated schedular for example thread.Timer()
