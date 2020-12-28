@@ -13,7 +13,7 @@ pi camera
 * Some in memory operations can reduce the disc reading, for example, capture a image and send it to telegram and capture video, convert to mp4 and send it to telegram.
 * Periodic operations such as taking a photo can be scheduled with more sophisticated schedular for example thread.Timer()
 * When motion detected, we can send a thread signal to trigger sending it to telegram instead of always checking its status. 
-* If you are recording video while capturing image is called, it will stop recording for about 2 seconds. The time also depends on the exposure setting. 
+* If you are recording video, capturing image will stop the recording for about 2 seconds. The time also depends on the exposure setting. 
 
 ## to do list
 - [x] photo request
