@@ -25,8 +25,9 @@ class DetectMotion(PiMotionAnalysis):
             np.square(a['x'].astype(np.float)) +
             np.square(a['y'].astype(np.float))
             ).clip(0, 255).astype(np.uint8)
-        # If there're more than 10 vectors with a magnitude greater
+        # If there're more than TH vectors with a magnitude greater
         # than 60, then say we've detected motion
+        # this two values can be changed according to your scenario (objective size, sensitivity, etc.)
         if (a > 60).sum() > self.TH:
             # print('Motion detected!')
             self.frame_motions[0] = 1
