@@ -15,6 +15,8 @@ class DetectMotion(PiMotionAnalysis):
         # motion for each frame in the passed fourseconds 
         self.frame_motions = np.zeros(self.framerate//3)
         self.motion_detected = False
+        self.size = size 
+        self.TH = size[0]*size[1]*3.2e-5
         
     def analyze(self, a):
         # queue the current frame motions 
@@ -25,7 +27,7 @@ class DetectMotion(PiMotionAnalysis):
             ).clip(0, 255).astype(np.uint8)
         # If there're more than 10 vectors with a magnitude greater
         # than 60, then say we've detected motion
-        if (a > 60).sum() > 10:
+        if (a > 60).sum() > self.TH:
             # print('Motion detected!')
             self.frame_motions[0] = 1
 
@@ -93,7 +95,7 @@ class pi_camera():
     def cap_video(self):
         file_path = os.path.join(self.video_dir, time.strftime("%Y%m%d_%H%M%S"))
         self.circular_buff.copy_to(file_path + '.h264', seconds = 20)
-        command = "MP4Box -add " + file_path + '.h264' + " " + file_path + '.mp4' + ' -fps 7.5'
+        command = "MP4Box -add " + file_path + '.h264' + " " + file_path + '.mp4' + ' -fps ' +str(self.framerate)
         call([command], shell=True, stdout=open(os.devnull, 'wb'))
         self.circular_buff.clear()
         return file_path + '.mp4'
