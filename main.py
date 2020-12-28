@@ -67,6 +67,7 @@ def send_motion_event():
     global motion_detect_enabled
     global recent_chat_id 
     while True:
+        time.sleep(0.01) # reduce the cpu usage
         if camera.motion_detected() and motion_detect_enabled:
             print('motion detected at time ' + time.strftime("%Y%m%d-%H%M%S"))
             file_name = camera.cap_motion_event()
