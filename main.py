@@ -43,7 +43,7 @@ def send_video_clips(message):
     except:
         print('wait for a while and try again')
     
-
+ 
 @bot.message_handler(commands=['stop'])
 def stop_surveillance(message):
     global motion_detect_enabled
