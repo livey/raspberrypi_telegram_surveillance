@@ -9,7 +9,7 @@ pi camera
 
 ## limitations & improvements
 * The pi camera only output motion vector when you choose h264 format while the telegram bot support mp4 video. So, we need MP4Box to do format converting.
-* Some in memory operations can reduce the disc reading, for example, capture a image and send it telegram and capture video, convert to mp4 and send it to telegram.
+* Some in memory operations can reduce the disc reading, for example, capture a image and send it to telegram and capture video, convert to mp4 and send it to telegram.
 * periodic operations such as taking a photo can be scheduled with more sophisticated schedular for example thread.Timer()
 * when motion detected, we can send a thread signal to trigger sending it telegram instead of always checking it status. 
 
