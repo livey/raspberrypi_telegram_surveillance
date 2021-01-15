@@ -24,3 +24,4 @@ pyaudio
 - [x] stop, start
 - [x] voice detection
 - [ ] adjust exposure time according to your local time
+- [ ] more sophisticated voice detection and motion detection algorithms.
