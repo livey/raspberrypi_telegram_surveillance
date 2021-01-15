@@ -15,6 +15,7 @@ pyaudio
 * Periodic operations such as taking a photo can be scheduled with more sophisticated schedular for example thread.Timer()
 * When motion detected, we can send a thread signal to trigger sending it to telegram instead of always checking its status. 
 * If you are recording video, capturing image will stop the recording for about 2 seconds. The time also depends on the exposure setting. 
+* Pay attention to the chunk size. Small chunk size will result in two frequent call backs and lead to lose of chunks. On my Raspberry Pi 4B. It set chunk-size=8192.  
 
 ## to do list
 - [x] photo request
