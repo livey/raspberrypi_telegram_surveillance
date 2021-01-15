@@ -20,5 +20,5 @@ pi camera
 - [x] video request
 - [x] motion detection
 - [x] stop, start
-- [ ] voice detection
+- [x] voice detection
 - [ ] adjust exposure time according to your local time
