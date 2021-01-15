@@ -6,7 +6,7 @@ The image resolution is maximized. When the video resolution is 1920*792, it man
 [sudo apt install gpac](https://gpac.wp.imt.fr/tag/mp4box/)  
 [py telegram api](https://github.com/eternnoir/pyTelegramBotAPI)  
 pi camera  
-pyaudio
+follow [this](https://raspberrypi.stackexchange.com/questions/75031/cannot-install-pyaudio) to install pyaudio
 
 ## limitations & improvements
 * The framerate is so low. Do not know how to improve it. It is weird video resolutions 640x480 and 1920x792 result in the same maximal framerate 8. 
