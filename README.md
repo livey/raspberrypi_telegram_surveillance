@@ -1,6 +1,7 @@
 ## raspberrypi_telegram_surveillance
 Use pi camera to detect the moition and sent the video to your telegram. 
-The image resolution is maximized. When the video resolution is 1920*792, it manages framerate 8. 
+The image resolution is maximized. When the video resolution is 1920x792, it manages framerate 8.   
+Use a usb audio device to detect voice and send the voice to you telegram. 
 
 ## dependencies
 [sudo apt install gpac](https://gpac.wp.imt.fr/tag/mp4box/)  
@@ -16,7 +17,7 @@ follow [this](https://raspberrypi.stackexchange.com/questions/75031/cannot-insta
 * When motion detected, we can send a thread signal to trigger sending it to telegram instead of always checking its status. 
 * If you are recording video, capturing image will stop the recording for about 2 seconds. The time also depends on the exposure setting. 
 * Pay attention to the chunk size. Small chunk size will result in two frequent call backs and lead to lose of chunks. On my Raspberry Pi 4B. I set chunk-size=8192.  
-
+* Currently, very naive voice detection is implemented, where I only detect the energy in a chunk. 
 ## to do list
 - [x] photo request
 - [x] video request
