@@ -16,7 +16,7 @@ follow [this](https://raspberrypi.stackexchange.com/questions/75031/cannot-insta
 * Periodic operations such as taking a photo can be scheduled with more sophisticated schedular for example thread.Timer()
 * When motion detected, we can send a thread signal to trigger sending it to telegram instead of always checking its status. 
 * If you are recording video, capturing image will stop the recording for about 2 seconds. The time also depends on the exposure setting. 
-* Pay attention to the chunk size. Small chunk size will result in two frequent call backs and lead to lose of chunks. On my Raspberry Pi 4B. I set chunk-size=8192.  
+* Pay attention to the chunk size. Small chunk size will result in two frequent call backs and lead to loss of chunks. On my Raspberry Pi 4B. I set chunk-size=8192.  
 * Currently, very naive voice detection is implemented, where I only detect the energy in a chunk. 
 ## to do list
 - [x] photo request
