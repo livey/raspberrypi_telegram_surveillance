@@ -5,7 +5,7 @@ The image resolution is maximized. When the video resolution is 1920*792, it man
 ## dependencies
 [sudo apt install gpac](https://gpac.wp.imt.fr/tag/mp4box/)  
 [py telegram api](https://github.com/eternnoir/pyTelegramBotAPI)  
-pi camera
+pi camera  
 pyaudio
 
 ## limitations & improvements
